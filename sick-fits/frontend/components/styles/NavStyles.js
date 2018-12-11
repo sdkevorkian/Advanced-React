@@ -26,7 +26,7 @@ const NavStyles = styled.ul`
       content: '';
       width: 2px;
       background: ${props => props.theme.lightgrey};
-      height: 100%;
+      height: 99%;
       left: 0;
       position: absolute;
       transform: skew(-20deg);
