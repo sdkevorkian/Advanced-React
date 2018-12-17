@@ -1,6 +1,7 @@
 endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.prisma
 # secret: ${env:PRISMA_SECRET}
+# this hook allows us to pull the generated prisma.graphql file
 hooks:
   post-deploy:
     - graphql get-schema -p prisma 
