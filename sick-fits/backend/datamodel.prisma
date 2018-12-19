@@ -3,3 +3,17 @@ type User {
   name: String!
   email: String!  
 }
+
+type Item {
+  id: ID! @unique
+  title: String!
+  description: String!
+  image: String
+  largeImage: String
+  price: Int!
+  #DateTime is prisma, not GraphQL
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  #user: User!
+}
+#any time make update to prisma have to deploy it
