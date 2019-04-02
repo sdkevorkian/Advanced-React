@@ -28,7 +28,7 @@ export default class Item extends Component{
                         pathname: '/update',
                         query: {id: item.id}
                     }}
-                    ><a>Edit </a></Link>
+                    ><a>Edit ✏️ </a></Link>
                     <button>Add to Cart</button>
                     <button>Delete</button>
                 </div>

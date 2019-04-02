@@ -1,14 +1,16 @@
-![Advanced React & GraphQL](https://advancedreact.com/images/ARG/arg-facebook-share.png)
+My notes:
 
-# Advanced React & GraphQL
+variables.env file contains
+FRONTEND_URL - url to load site
+PRISMA_ENDPOINT - the HTTP endpoint found in the dashboard of your prisma service
+(service found at app.prisma.io when you log in)
+PRISMA_SECRET - phrase for locking down prisma endpoint
+STRIPE_SECRET
+APP_SECRET
+PORT
+MAIL_HOST
+MAIL_PORT
+MAIL_USER
+MAIL_PASS
 
-These are the starter files and stepped solutions for the [Advanced React & GraphQL](https://AdvancedReact.com) course by [Wes Bos](https://WesBos.com/).
-
-## Getting Help
-
-The best place to get help is in the #advanced-react slack room - there is a link in your course dashboard.
-
-## FAQ
-
-**Q:** Which Extensions for VS Code is Wes using?  
-**A:** All my extensions are listed on [my dotfiles repo](https://github.com/wesbos/dotfiles), but specifically this course uses [ESLint](https://github.com/Microsoft/vscode-eslint) and [Prettier](https://github.com/prettier/prettier-vscode).
+prisma playground will load at http://localhost:3000/playground for local dev, can also get playground on prisma server
