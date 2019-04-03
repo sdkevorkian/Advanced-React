@@ -9,6 +9,7 @@ const Query = {
     //use below if going to be exactly like strict db call
     //good to use when setting up, before needing to set up custom logic
     items: forwardTo('db'),
+    item: forwardTo('db'),
 };
 
 module.exports = Query;

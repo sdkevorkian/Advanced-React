@@ -8,6 +8,21 @@ const Mutations = {
         }, info); //info passes query so database can return the item after creating
 
         return item; //return item after promise resolved
+    },
+    updateItem(parent, args, ctx, info){
+        //first take copy of the update
+        const updates = {...args};
+        //remove ID from updates, don't want to update the id ever
+        delete updates.id;
+        //run the update method
+        //ctx is context of request, db is how to expose prisma db to ourselves, then either query or mutation, 
+        //and then we have access to all mutations in generated file
+        return ctx.db.mutation.updateItem({
+            data: updates,
+            where: {
+                id: args.id
+            }
+        }, info);//info is how the update knows what to return, INFO will retain query
     }
 };
 
