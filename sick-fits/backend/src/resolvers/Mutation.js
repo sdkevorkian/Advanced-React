@@ -23,6 +23,15 @@ const Mutations = {
                 id: args.id
             }
         }, info);//info is how the update knows what to return, INFO will retain query
+    },
+    async deleteItem(parent, args, ctx, info){
+        const where = {id: args.id};
+        //1. find the item
+        const item = await ctx.db.query.item({where}, `{id title}`); // passing raw graphql instead of info query from frontend
+        //2. check if they own item or have permissions
+        //TODO
+        //3. delete it!
+        return ctx.db.mutation.deleteItem({where}, info); //now we pass in query from frontend (in info parameter)
     }
 };
 
