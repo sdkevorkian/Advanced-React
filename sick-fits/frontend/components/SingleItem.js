@@ -54,8 +54,7 @@ class SingleItem extends Component{
                         <h2>Viewing {item.title}</h2>
                         <p>{item.description}</p>
                     </div>
-                </SingleItemStyles>
-                
+                </SingleItemStyles>                
             }}
             </Query>
         )
