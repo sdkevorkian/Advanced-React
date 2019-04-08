@@ -10,6 +10,7 @@ const Query = {
     //good to use when setting up, before needing to set up custom logic
     items: forwardTo('db'),
     item: forwardTo('db'),
+    itemsConnection: forwardTo('db')
 };
 
 module.exports = Query;

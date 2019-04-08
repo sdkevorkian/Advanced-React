@@ -59,6 +59,8 @@ class CreateItem extends Component {
         return (
             <Mutation 
                 mutation={CREATE_ITEM_MUTATION} 
+                //refetchQueries={} - queries that need to refresh from server, however then you need to get unknown number of pages
+                //as of 4/8/19 no good way to invalidate parts of cache with react-apollo, needs updated materials
                 variables={this.state}>
                 {(createItem, {loading, error})=> (
                 //also called and data as deconstructred payload
